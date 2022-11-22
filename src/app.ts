@@ -50,7 +50,7 @@ class ExpressServer {
         // });
     }
     
-    middleware = (req: Request, res: Response, next: NextFunction) => {
+    #middleware = (req: Request, res: Response, next: NextFunction) => {
         res.header("Access-Control-Allow-Origin", "*");
         res.header("Access-Control-Allow-Methods", "GET, POST");
         res.header("Access-Control-Allow-Headers", "*" /* "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept" */);
@@ -66,7 +66,7 @@ class ExpressServer {
         this.app.use(timeout("10s"));
         this.app.use(helmet());
         this.app.use(cors());
-        this.app.use(this.middleware);
+        this.app.use(this.#middleware);
     };
 
     #router = (): void => {

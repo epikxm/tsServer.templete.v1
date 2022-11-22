@@ -26,7 +26,7 @@ class ExpressServer {
     #SSL_PORT = 443;
     app: express.Application = express();
 
-    httpServer: http.Server;
+    // httpServer: http.Server;
     // httpsServer: https.Server;
 
     constructor() {
@@ -40,12 +40,12 @@ class ExpressServer {
         // );
         
         // #HTTP
-        this.httpServer = http.createServer(this.app).listen(this.#WEB_PORT, () => {
+        http.createServer(this.app).listen(this.#WEB_PORT, () => {
             console.log(`HTTP web server listening on port ${this.#WEB_PORT}`)
         });
         
         // #HTTPS
-        // this.httpsServer = https.createServer(this.#ssl_options, this.app).listen(this.#SSL_PORT, () => {
+        // https.createServer(this.#ssl_options, this.app).listen(this.#SSL_PORT, () => {
         //     console.log(`HTTPS: Express listening on port ${this.#SSL_PORT}`);
         // });
     }

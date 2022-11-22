@@ -8,7 +8,7 @@ mkdir src
 mkdir dist
 ```
 
-#### 폴더구조
+### 폴더구조
 
 ```
 [project: /]
@@ -20,7 +20,7 @@ mkdir dist
     tsconfig.json
 ```
 
-#### Typescript & 관련 모듈 설치
+### Typescript & 관련 모듈 설치
 
 ```
 npm i -g typescript
@@ -28,13 +28,13 @@ npm i @types/node
 npm i -D ts-node tsc-watch
 ```
 
-#### Typescript 환경 설정(tsconfig.json 생성)
+### Typescript 환경 설정(tsconfig.json 생성)
 
 ```
 tsc --init --rootDir src --outDir ./dist --esModuleInterop --lib ES2020 --module commonjs --noImplicitAny true
 ```
 
-#### tsconfig.json 수정
+### tsconfig.json 수정
 
 ```
 {
@@ -46,7 +46,7 @@ tsc --init --rootDir src --outDir ./dist --esModuleInterop --lib ES2020 --module
 }
 ```
 
-#### package.json 수정
+### package.json 수정
 
 ```
 "scripts": {
@@ -57,7 +57,7 @@ tsc --init --rootDir src --outDir ./dist --esModuleInterop --lib ES2020 --module
 }
 ```
 
-#### 기본 모듈 설치
+### 기본 모듈 설치
 
 ```
 npm i body-parser @types/body-parser compression @types/compression connect-timeout @types/connect-timeout cors @types/cors express @types/express helmet dotenv @types/node

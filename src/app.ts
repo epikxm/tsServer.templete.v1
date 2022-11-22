@@ -44,7 +44,7 @@ class ExpressServer {
             console.log(`HTTP web server listening on port ${this.#WEB_PORT}`)
         });
         
-        // #SSL
+        // #HTTPS
         // this.httpsServer = https.createServer(this.#ssl_options, this.app).listen(this.#SSL_PORT, () => {
         //     console.log(`HTTPS: Express listening on port ${this.#SSL_PORT}`);
         // });
